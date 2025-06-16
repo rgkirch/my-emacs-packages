@@ -1,0 +1,3 @@
+* https://github.com/rgkirch/modeline-major-mode
+* https://github.com/rgkirch/modeline-vcs-diffstat
+* https://github.com/rgkirch/propertized-text-to-svg
