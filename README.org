@@ -1,5 +1,9 @@
 * [[https://github.com/rgkirch/resolve-face][rgkirch/resolve-face]]
 I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/rgkirch/propertized-text-to-svg]].
+
+[[file:~/.config/doom/modules/resolve-face/resolve-face.el::defun face-attribute+ (face attribute &optional frame inherit]]
+
+[[file:~/.config/doom/modules/resolve-face/resolve-face.el::defun resolve-face-attributes (face &optional frame inherit]]
 * [[https://github.com/rgkirch/propertized-text-to-svg][rgkirch/propertized-text-to-svg]]
 :PROPERTIES:
 :ID:       89b2c6a4-20e3-4f84-90f0-80b26f83d46a
