@@ -9,6 +9,8 @@ I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/r
 :ID:       89b2c6a4-20e3-4f84-90f0-80b26f83d46a
 :END:
 I wanted to demonstrate the [[id:fd771b19-1161-40c2-9f36-4117127af5ff][modeline-vcs-diffstat]] package in the readme.
+
+[[file:~/.config/doom/modules/propertized-text-to-svg/propertized-text-to-svg.el::defun propertized-text-to-svg (p-string &optional buffer]]
 * [[https://github.com/rgkirch/modeline-major-mode][rgkirch/modeline-major-mode]]
 I didn't want the full text of the major mode in the doom modeline so I made a doom modeline segment with just the major mode icon.
 * [[https://github.com/rgkirch/modeline-vcs-diffstat][rgkirch/modeline-vcs-diffstat]]
