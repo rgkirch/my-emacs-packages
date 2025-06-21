@@ -1,6 +1,44 @@
 * [[https://github.com/rgkirch/read-symbol-shorthands-helper][read-symbol-shorthands-helper]]
 I was annoyed by prefixing everything with the long package name.
 
+#+begin_src emacs-lisp :eval no
+;;; some-nice-string-utils.el --- Some Nice String Utils -*- lexical-binding: t; -*-
+
+(defun some-nice-string-utils-split (separator s &optional omit-nulls)
+  "A match-data saving variant of `split-string'."
+  (save-match-data (split-string s separator omit-nulls)))
+
+(defun some-nice-string-utils-lines (s)
+  "Split string S at newline characters into a list of strings."
+  (some-nice-string-utils-split "\\(\r\n\\|[\n\r]\\)" s))
+
+(provide 'some-nice-string-utils)
+
+;;; some-nice-string-utils.el ends here
+#+end_src
+
+Mark the region ~some-nice-string-utils-~ and then invoke ~M-x ~read-symbol-shorthands-helper-compress~ and this is the result.
+
+#+begin_src emacs-lisp
+;;; some-nice-string-utils.el --- Some Nice String Utils -*- lexical-binding: t; -*-
+
+(defun snsu-split (separator s &optional omit-nulls)
+  "A match-data saving variant of `split-string'."
+  (save-match-data (split-string s separator omit-nulls)))
+
+(defun snsu-lines (s)
+  "Split string S at newline characters into a list of strings."
+  (snsu-split "\\(\r\n\\|[\n\r]\\)" s))
+
+(provide 'some-nice-string-utils)
+
+;; Local Variables:
+;; read-symbol-shorthands: (("snsu-" . "some-nice-string-utils-"))
+;; End:
+
+;;; some-nice-string-utils.el ends here
+#+end_src
+
 * [[https://github.com/rgkirch/resolve-face][resolve-face]]
 I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/rgkirch/propertized-text-to-svg]].
 
