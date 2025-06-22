@@ -64,7 +64,6 @@ I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/r
 :END:
 I wanted to demonstrate the [[id:fd771b19-1161-40c2-9f36-4117127af5ff][modeline-vcs-diffstat]] package in the readme.
 
-
 #+BEGIN_SRC emacs-lisp :results file :file ./assets/the-quick-brown-fox.svg
 (propertized-text-to-svg
  (concat (propertize "The" 'face '(:foreground "black"))
