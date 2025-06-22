@@ -42,7 +42,6 @@ Mark the region ~some-nice-string-utils-~ and then invoke ~M-x ~read-symbol-shor
 * [[https://github.com/rgkirch/resolve-face][resolve-face]]
 I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/rgkirch/propertized-text-to-svg]].
 
-
 #+begin_src emacs-lisp :results verbatim
 (resolve-face-attributes 'treemacs-root-remote-face nil t)
 #+end_src
@@ -55,7 +54,6 @@ I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/r
 
 : ((:family . "Adwaita Mono") (:foundry . "UKWN") (:width . normal) (:height . 189) (:weight . bold) (:slant . normal) (:underline) (:overline) (:extend) (:strike-through) (:box) (:inverse-video) (:foreground . "#c678dd") (:background . "#282c34") (:stipple) (:inherit))
 
-
 [[file:~/.config/doom/modules/resolve-face/resolve-face.el::defun face-attribute+ (face attribute &optional frame inherit]]
 
 [[file:~/.config/doom/modules/resolve-face/resolve-face.el::defun resolve-face-attributes (face &optional frame inherit]]
@@ -66,13 +64,46 @@ I was working on [[id:89b2c6a4-20e3-4f84-90f0-80b26f83d46a][https://github.com/r
 :END:
 I wanted to demonstrate the [[id:fd771b19-1161-40c2-9f36-4117127af5ff][modeline-vcs-diffstat]] package in the readme.
 
+
+#+BEGIN_SRC emacs-lisp :results file :file ./assets/the-quick-brown-fox.svg
+(propertized-text-to-svg
+ (concat (propertize "The" 'face '(:foreground "black"))
+         " "
+         (propertize "quick" 'face '(:foreground "brown" :weight bold))
+         " "
+         (propertize "brown" 'face '(:foreground "brown" :slant italic))
+         " "
+         (propertize "fox" 'face '(:foreground "orange red" :underline t))
+         " "
+         (propertize "jumps over the" 'face '(:foreground "black"))
+         " "
+         (propertize "lazy" 'face '(:foreground "grey" :strike-through t))
+         " "
+         (propertize "dog." 'face '(:foreground "black" :weight heavy))))
+#+END_SRC
+
+[[file:./assets/the-quick-brown-fox.svg]]
+
+
 [[file:~/.config/doom/modules/propertized-text-to-svg/propertized-text-to-svg.el::defun propertized-text-to-svg (p-string &optional buffer]]
 
 * [[https://github.com/rgkirch/modeline-major-mode][modeline-major-mode]]
 I didn't want the full text of the major mode in the doom modeline so I made a doom modeline segment with just the major mode icon.
+
+
 
 * [[https://github.com/rgkirch/modeline-vcs-diffstat][modeline-vcs-diffstat]]
 :PROPERTIES:
 :ID:       fd771b19-1161-40c2-9f36-4117127af5ff
 :END:
 I didn't want to be surprised that a file isn't in vcs when i thought it was or be surprised that the file had uncommited changes when i thought it was commited.
+
+#+begin_src emacs-lisp :results file :file ./assets/modeline-vcs-diffstat.svg
+(propertized-text-to-svg
+ (modeline-vcs-diffstat--format-metrics
+  (modeline-vcs-diffstat--metrics
+   '(:staged-removed 20
+     :staged-added 30))))
+#+end_src
+
+[[file:./assets/modeline-vcs-diffstat.svg]]
