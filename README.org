@@ -1,9 +1,11 @@
 * [[https://github.com/rgkirch/doom-packages-inline-toggle][doom-packages-inline-toggle]]
 I was annoyed at editing the ~packages.el~ file to unpin and disable things. I didn't even know I could add ~:disable t~ to disable a package. I thought I had to comment it out or wrap it in ~when nil~.
+
+I made a package that adds subtle buttons to whatever line the mouse is on. One button toggles between pinned i.e. ~package!~ or unpinned i.e. ~unpin!~. The other button toggles enabled or disabled i.e. ~:disable t~.
 [[file:assets/unpin_disable.png]]
 
 * [[https://github.com/rgkirch/read-symbol-shorthands-helper][read-symbol-shorthands-helper]]
-I was annoyed by prefixing everything with the long package name.
+I was annoyed by prefixing everything with a long package name. I made a package that makes it easy to add to ~read-symbol-shorthands~.
 
 #+begin_src emacs-lisp :eval no
 ;;; some-nice-string-utils.el --- Some Nice String Utils -*- lexical-binding: t; -*-
