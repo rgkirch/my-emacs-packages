@@ -1,3 +1,7 @@
+* [[https://github.com/rgkirch/doom-packages-inline-toggle][doom-packages-inline-toggle]]
+I was annoyed at editing the ~packages.el~ file to unpin and disable things. I didn't even know I could add ~:disable t~ to disable a package. I thought I had to comment it out or wrap it in ~when nil~.
+[[file:assets/unpin_disable.png]]
+
 * [[https://github.com/rgkirch/read-symbol-shorthands-helper][read-symbol-shorthands-helper]]
 I was annoyed by prefixing everything with the long package name.
 
